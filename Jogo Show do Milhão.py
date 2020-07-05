@@ -1,10 +1,14 @@
 import pygame
 from time import sleep
 from random import randint, choice, choices
+
+
 def tocar_musica(musica):
     pygame.mixer.init()
     pygame.mixer.music.load(musica)
     pygame.mixer.music.play()
+
+
 perguntas = list()
 alternativas = list()
 respostas = list()
@@ -101,6 +105,7 @@ while True:
     while resp not in '1234':
         print('\nVocê não pode mais pedir ajuda.')
         resp = input('Escolha novamente entre as opções acima: ')
+    sleep(0.5)
     print('\nA Resposta está E', end='')
     sleep(2)
     if resp == respostas[aleatorio]:
